@@ -1,0 +1,36 @@
+@startuml ./LandingView.png
+
+  !include plantuml-styles.txt
+  
+  ' override the linetype
+  skinparam linetype ortho 
+
+	actor Bob
+	boundary View #F5F5F5
+	collections Model
+	database API #F5F5F5
+
+	Bob -> View : Click on Dataset Landing Page
+	activate View
+
+	View -> Model : Request Data
+	activate Model 
+
+	Model -> API : HTTP GET Request (Header:PID)
+	activate API
+
+	API -> API : retreive data
+
+	API --> Model : HTTP GET response
+	deactivate API
+
+	Model -> Model : Computation
+
+	Model --> View : Render View
+	deactivate Model
+
+	View -> Bob : UI/View
+	deactivate View
+
+
+@enduml

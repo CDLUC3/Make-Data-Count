@@ -1,0 +1,13 @@
+@startuml ./MetricsObject.png
+
+  !include plantuml-styles.txt
+  
+  ' override the linetype
+  skinparam linetype ortho 
+
+	class Dummy {
+		{field} A field (despite parentheses)
+		{method} Some method
+	}
+
+@enduml
