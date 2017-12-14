@@ -17,14 +17,14 @@ Once the UI mockups are in progress, we can use those to design the queries that
 * Views
 * Time for each event
 * Dataset identifier (unique PID)
-* User identifier (unique ID)
+* ~~User identifier (unique ID)~~
 
 
 ### _What filter queries are needed?_
 * **Exact match** for the `dataset` unique identifier.
     * This query will be helpful to retreive the dataset contents as well as the DLM for that dataset.
-* **Exact match** for the `user identifier`.
-    * This query will be helpful to get the user's contribution over the years and statistics based on that.
+* ~~**Exact match** for the `user identifier`.~~
+    * ~~This query will be helpful to get the user's contribution over the years and statistics based on that.~~
 * **Substring match** for the dataset query based on the `title` param.
     * This query will be helpful to return the search results for the dataset search.
 * **Substring match** for the user query based on the `author-name` param.
@@ -32,14 +32,15 @@ Once the UI mockups are in progress, we can use those to design the queries that
 * Date `-gt` and `-lt` for the dataset metrics count.
 
 ### _What aggregations are needed._
-Basics: 
+Definitions: 
 1. Grouping: it allows to group search results by specified field. For example, if you group by the author field, then all documents with the same value in the author field fall into a single group. You will have a kind of tree as output.
 2. Facets: this feature doesn't group documents, it just tells you how many documents fall in a specific value of a facet. For example, if you have a facet based on the author field, you will receive a list of all your authors, and for each author you will know how many documents belong to that specific author.
 3. Aggregation: in statistics, aggregate data are data combined from several measurements. When data are aggregated, groups of observations are replaced with summary statistics based on those observations.
 
-Applications:
+Usage:
 * Perform grouping on the datasets published by a speific user. This will be helpful for user profile to show the user's contribution over the years.
-* Similarly grouping can be performed for repository page 
+* Similarly grouping can be performed for all datasets published by a specific repository.
+* ...
 
 ### _Performance requirements for a responsive UX._
 * Should be browser responsive. i.e. the design should be consistent at different browser widths (UI).
@@ -47,27 +48,31 @@ Applications:
 * Interactive, easy to use, self explanatory interface.
 
 ### _What information should be stored on the client side._
-1. Credentials of the user.
-2. 
+>
+> This is more specific to the members variables and methods of the **MetricsObject** class.
+>
 
 ### _What would be the best way to store that information._
-* session
-* local
-* hub
+* ~~session~~
+* ~~local~~
+* ~~hub~~
 * models
 
 **_Extend a model or develop a new model:_**
 >
 > developing a new model: MetricsObject
-> 
-
-* 
+>
 
 ### _Technical Diagrams_
 
+**Question**: `.rst` format?!
+
+[MetricsObject Class](https://raw.githubusercontent.com/CDLUC3/Make-Data-Count/master/docs/design/MetricsObject.png)
+* [Extending a  backbone Model](http://backbonejs.org/#Model)
+
 | Use-Case| Description |
 |---|---|
-|Landing Page View|Rendering dataset contents as well as DLM on a view |
+|[Landing Page View](https://github.com/CDLUC3/Make-Data-Count/blob/master/docs/design/Landing_Page_View_UC.md)|Rendering dataset contents as well as DLM on a view |
 
 
 
