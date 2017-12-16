@@ -46,6 +46,8 @@ Usage:
 * Should be browser responsive. i.e. the design should be consistent at different browser widths (UI).
     * Bootstrap.
 * Interactive, easy to use, self explanatory interface.
+* `application/json` is a preferred response format (i.e. vs `text/xml`). 
+    *  Most browser-based clients are already geared to convert JSON directly into Javascript objects, whereas for XML return types, we have to apply a `parse()` step and convert XML to JS objects.
 
 ### _What information should be stored on the client side._
 >
@@ -60,7 +62,7 @@ Usage:
 
 **_Extend a model or develop a new model:_**
 >
-> developing a new model: MetricsObject
+> developing a new model: dataMetrics Model : refer to the 
 >
 
 ### _Technical Diagrams_
