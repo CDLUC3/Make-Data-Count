@@ -1,0 +1,327 @@
+swagger: '2.0'
+info:
+  description: Data Metrics API
+  version: 1.0.0
+  title: Data Metrics API
+  contact:
+    name: Data Metrics API Support
+    email: support@makedatacount.org
+    url: https://makedatacount.org
+    # Authors: 
+    #    Stephen Abrams, California Digital Library
+    #    Amber Budden, NCEAS, DataONE
+    #    John Chodacki, California Digital Library
+    #    Trisha Cruse, DataCite
+    #    Martin Fenner, DataCite
+    #    Kristian Garza, DataCite
+    #    Christopher Jones, NCEAS, DataONE
+    #    Matthew Jones, NCEAS, DataONE
+    #    Daniella Lowenberg, California Digital Library
+    #    Rushiraj Nenuji, NCEAS 
+    #    Dave Vieglais, DataONE
+    #    Lauren Walker, NCEAS, DataONE
+
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+# Tags used for organizing operations
+tags:
+- name: admins
+  description: Operations available to authenticated administrators
+- name: public
+  description: Operations available to the public
+- name: authenticatedUser
+  description: Operations available to an authenticated user
+
+# REST API endpoints
+paths:
+  /events:
+    post:
+      tags:
+        - authenticatedUser
+      summary: Add event items
+      operationId: addEvent
+      description: Add event items to the events collection
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: header
+        name: session
+        description: 'Authentication session (JWT token).'
+        type: string
+        required: true
+      - in: body
+        name: events
+        description: Events item to add
+        required: true
+        schema:
+          $ref: '#/definitions/Events'
+      responses:
+        201:
+          description: item created
+        400:
+          description: invalid input, object invalid
+        409:
+          description: an existing item already exists
+  
+  /metrics/{id}:
+    get:
+      tags:
+      - public
+      summary: Get metrics by resource identifier
+      operationId: getMetrics
+      description: |
+        Returns a Metrics object with summarized and detailed metrics 
+        for a resource with a given identifier
+      produces:
+      - application/json
+      parameters:
+      - in: header
+        name: session
+        description: 'Authentication session (JWT token).'
+        type: string
+      - in: path
+        name: id
+        description: The identifier of the resource to be described by the returned metrics
+        required: true
+        type: string
+      responses:
+        200:
+          description: search results matching criteria
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Metrics'
+        400:
+          description: bad input parameter
+
+# Model Type Definitions
+definitions:
+
+  # A citation event of an object with minimum citable metadata
+  Citation:
+    allOf:
+      - $ref: '#/definitions/Event'
+    required:
+      - cites
+      - identifier
+      - authors
+      - title
+      - publicationDate
+      - publisher
+    properties:
+      cites:
+        type: string
+        description: The identifier of the object being cited
+        example: 'doi:10.67890/HIJKLM'
+      identifier:
+        type: string
+        description: The identifier of the work citing the object
+        example: 'doi:10.12345/ABCDEFG'
+      authors:
+        type: array
+        items:
+          type: string
+      title:
+        type: string
+        description: The title of the work citing the object
+        example: ''
+      publicationDate:
+        type: string
+        description: The publication date of the work citing the object
+        example: '2018-01-01'
+      publisher:
+        type: string
+        description: The publisher of the work citing the object
+      url:
+        type: string
+        description: The canonical url of the work citing the object
+        example: 'https://doi.org/doi:10.12345/ABCDEFG'
+
+  # An investigation event (view) of an object      
+  Investigation:
+    allOf:
+      - $ref: '#/definitions/Event'
+    required:
+      - identifier
+    properties:
+      identifier:
+        type: string
+        description: The identifier of the investigated object
+        example: 'doi:10.12345/ABCDEFG'
+
+  # A request (download) event of an object
+  Request:
+    allOf:
+      - $ref: '#/definitions/Event'
+    required:
+      - identifier
+    properties:
+      identifier:
+        type: string
+        description: The identifier of the requested object
+        example: 'doi:10.12345/ABCDEFG'
+
+  # A change (update) event of an object with change type metadata
+  Change:
+    allOf:
+      - $ref: '#/definitions/Event'
+    required:
+      - identifier
+    properties:
+      identifier:
+        type: string
+        description: The identifier of the changed object
+        example: 'doi:10.12345/ABCDEFG'
+      obsoletedBy: 
+        type: string
+
+  # An annotation (assertion) event of an object
+  Annotation:
+    allOf:
+      - $ref: '#/definitions/Event'
+    required:
+      - identifier
+    properties:
+      identifier:
+        type: string
+
+  #A collection of Events Object
+  Events:
+    type: array
+    items:
+      $ref: '#/definitions/Event'
+    properties:
+      maxitems:
+        type: integer
+        description: 'Maximum length of the Events Collection.'
+        example: '1000'
+    
+
+  # An abstract event
+  Event:
+    type: object
+    discriminator: eventType
+    required:
+      - eventId
+      - date
+    properties:
+      eventId:
+        type: string
+        description: 'The potentially unique event identifier'
+        example: 'f0b0a80c-2c1d-4a3c-b233-7372967758e3'
+      date:
+        $ref: '#/definitions/DateTime'
+      eventType:
+        type: string
+        description: 'The type of event (citation | investigation | request | change | annotation)'
+
+  DateTime:
+    type: string
+    description:
+      'The date of the event expressed in ISO 8601 format YYYY-mm-DDTHH:MM:SS.SSS+0000'
+      
+  CountsByDate:
+    type: object
+    required:
+      - date
+      - count
+    properties:
+      date:
+        type: string
+        description: The time period representing the event count
+        example: '2018-01'
+      count:
+        type: integer
+        format: int32
+        description: The number of events for the time period
+        example: 5948
+
+  # A collection of metrics objects
+  Metrics:
+    type: array
+    items: 
+      $ref: '#/definitions/Metric'
+      
+  # An abstract metric object  
+  Metric:
+    type: object
+    discriminator: metricType
+    required:
+      - date
+      - identifier
+      - metricType
+    properties:
+      date:
+          $ref: '#/definitions/DateTime'
+      identifier:
+        type: string
+        description: 
+          'An identifier representing the described resource'
+        example: 'doi:10.12345/ABCDEFG'
+      metricType:
+        type: string
+        description: 
+          'The type of metric (citation, investigation, request, volume)'
+        example: citation
+
+  # A citation metric, extends Metric
+  CitationMetric:
+    allOf:
+      - $ref: '#/definitions/Metric'
+      - properties:
+          totalCount:
+            type: integer
+            format: int32
+          citationsByDate:
+            type: array
+            items:
+              $ref: '#/definitions/CountsByDate'
+  
+  # An investigation (view) metric, extends Metric            
+  InvestigationMetric:
+    allOf:
+      - $ref: '#/definitions/Metric'
+      - properties:
+          totalCount:
+            type: integer
+            format: int32
+          investigationsByDate:
+            type: array
+            items:
+              $ref: '#/definitions/CountsByDate'
+
+  # A request metric (downloads), extends Metric
+  RequestMetric:
+    allOf:
+      - $ref: '#/definitions/Metric'
+      - properties:
+          totalCount:
+            type: integer
+            format: int32
+          requestsByDate:
+            type: array
+            items:
+              $ref: '#/definitions/CountsByDate'
+
+  # A volume metric (transferred bytes), extends Metric
+  VolumeMetric:
+    allOf:
+      - $ref: '#/definitions/Metric'
+      - properties:
+          totalCount:
+            type: integer
+            format: int32
+          volumesByDate:
+            type: array
+            items:
+              $ref: '#/definitions/CountsByDate'
+
+# Added by API Auto Mocking Plugin
+host: virtserver.swaggerhub.com
+basePath: /NCEAS/data-metrics/1.0.0
+schemes:
+ - https
