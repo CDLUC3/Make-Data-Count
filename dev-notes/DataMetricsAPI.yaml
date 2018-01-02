@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
   description: Data Metrics API
-  version: 1.0.0
+  version: "1.0.0.2"
   title: Data Metrics API
   contact:
     name: Data Metrics API Support
@@ -21,9 +21,11 @@ info:
     #    Dave Vieglais, DataONE
     #    Lauren Walker, NCEAS, DataONE
 
+
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
+
 
 # Tags used for organizing operations
 tags:
@@ -33,6 +35,7 @@ tags:
   description: Operations available to the public
 - name: authenticatedUser
   description: Operations available to an authenticated user
+
 
 # REST API endpoints
 paths:
@@ -66,7 +69,8 @@ paths:
           description: invalid input, object invalid
         409:
           description: an existing item already exists
-  
+
+
   /metrics/{id}:
     get:
       tags:
@@ -97,15 +101,75 @@ paths:
               $ref: '#/definitions/Metrics'
         400:
           description: bad input parameter
+  
+  
+  /metrics/metricssummaries/{id}:
+    get:
+      tags:
+      - public
+      summary: Get metrics summaries by resource identifier
+      operationId: getMetricsSummaries
+      description: |
+        Returns a metrics summary object with summarized metrics for a resource with a given identifier
+      produces:
+      - application/json
+      parameters:
+      - in: header
+        name: session
+        description: 'Authentication session (JWT token).'
+        type: string
+      - in: path
+        name: id
+        description: The identifier of the resource to be described by the returned metrics
+        required: true
+        type: string
+      responses:
+        200:
+          description: search results matching criteria
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/MetricSummary'
+        400:
+          description: bad input parameter
+
 
 # Model Type Definitions
 definitions:
 
+  DateTime:
+    type: string
+    description:
+      'The date of the event expressed in ISO 8601 format YYYY-mm-DDTHH:MM:SS.SSS+0000'
+
+
+  MetricByTimeAndLocation:
+    type: object
+    required:
+      - time
+      - location
+      - value
+    properties:
+      time:
+        type: string
+        description: The time period representing the event count
+        example: '2018-01'
+      location: 
+        type: string
+        description: The ISO administrative area code at the country or state / province level
+        example: 'US'
+      value:
+        type: number
+        format: int32
+        description: The value of the metric at the given time and location.
+        example: 5948
+
+
   # A citation event of an object with minimum citable metadata
   Citation:
-    allOf:
-      - $ref: '#/definitions/Event'
     required:
+      - eventId
+      - date
       - cites
       - identifier
       - authors
@@ -130,9 +194,7 @@ definitions:
         description: The title of the work citing the object
         example: ''
       publicationDate:
-        type: string
-        description: The publication date of the work citing the object
-        example: '2018-01-01'
+        $ref: '#/definitions/DateTime'
       publisher:
         type: string
         description: The publisher of the work citing the object
@@ -140,75 +202,6 @@ definitions:
         type: string
         description: The canonical url of the work citing the object
         example: 'https://doi.org/doi:10.12345/ABCDEFG'
-
-  # An investigation event (view) of an object      
-  Investigation:
-    allOf:
-      - $ref: '#/definitions/Event'
-    required:
-      - identifier
-    properties:
-      identifier:
-        type: string
-        description: The identifier of the investigated object
-        example: 'doi:10.12345/ABCDEFG'
-
-  # A request (download) event of an object
-  Request:
-    allOf:
-      - $ref: '#/definitions/Event'
-    required:
-      - identifier
-    properties:
-      identifier:
-        type: string
-        description: The identifier of the requested object
-        example: 'doi:10.12345/ABCDEFG'
-
-  # A change (update) event of an object with change type metadata
-  Change:
-    allOf:
-      - $ref: '#/definitions/Event'
-    required:
-      - identifier
-    properties:
-      identifier:
-        type: string
-        description: The identifier of the changed object
-        example: 'doi:10.12345/ABCDEFG'
-      obsoletedBy: 
-        type: string
-
-  # An annotation (assertion) event of an object
-  Annotation:
-    allOf:
-      - $ref: '#/definitions/Event'
-    required:
-      - identifier
-    properties:
-      identifier:
-        type: string
-
-  #A collection of Events Object
-  Events:
-    type: array
-    items:
-      $ref: '#/definitions/Event'
-    properties:
-      maxitems:
-        type: integer
-        description: 'Maximum length of the Events Collection.'
-        example: '1000'
-    
-
-  # An abstract event
-  Event:
-    type: object
-    discriminator: eventType
-    required:
-      - eventId
-      - date
-    properties:
       eventId:
         type: string
         description: 'The potentially unique event identifier'
@@ -217,28 +210,108 @@ definitions:
         $ref: '#/definitions/DateTime'
       eventType:
         type: string
-        description: 'The type of event (citation | investigation | request | change | annotation)'
+        description: 'The type of event : Citation'
 
-  DateTime:
-    type: string
-    description:
-      'The date of the event expressed in ISO 8601 format YYYY-mm-DDTHH:MM:SS.SSS+0000'
-      
-  CountsByDate:
-    type: object
+
+  # An investigation event (view) of an object      
+  Investigation:
     required:
+      - identifier
+      - eventId
       - date
-      - count
     properties:
-      date:
+      identifier:
         type: string
-        description: The time period representing the event count
-        example: '2018-01'
-      count:
+        description: The identifier of the investigated object
+        example: 'doi:10.12345/ABCDEFG'
+      eventId:
+        type: string
+        description: 'The potentially unique event identifier'
+        example: 'f0b0a80c-2c1d-4a3c-b233-7372967758e3'
+      date:
+        $ref: '#/definitions/DateTime'
+      eventType:
+        type: string
+        description: 'The type of event : Investigation'
+
+
+  # A request (download) event of an object
+  Request:
+    required:
+      - identifier
+      - eventId
+      - date
+    properties:
+      identifier:
+        type: string
+        description: The identifier of the requested object
+        example: 'doi:10.12345/ABCDEFG'
+      eventId:
+        type: string
+        description: 'The potentially unique event identifier'
+        example: 'f0b0a80c-2c1d-4a3c-b233-7372967758e3'
+      date:
+        $ref: '#/definitions/DateTime'
+      eventType:
+        type: string
+        description: 'The type of event : Request'
+
+
+  # A change (update) event of an object with change type metadata
+  Change:
+    required:
+      - identifier
+      - eventId
+      - date
+    properties:
+      identifier:
+        type: string
+        description: The identifier of the changed object
+        example: 'doi:10.12345/ABCDEFG'
+      obsoletedBy: 
+        type: string
+      eventId:
+        type: string
+        description: 'The potentially unique event identifier'
+        example: 'f0b0a80c-2c1d-4a3c-b233-7372967758e3'
+      date:
+        $ref: '#/definitions/DateTime'
+      eventType:
+        type: string
+        description: 'The type of event : Change'
+
+
+  # An annotation (assertion) event of an object
+  Annotation:
+    required:
+      - identifier
+      - eventId
+      - date
+    properties:
+      identifier:
+        type: string
+      eventId:
+        type: string
+        description: 'The potentially unique event identifier'
+        example: 'f0b0a80c-2c1d-4a3c-b233-7372967758e3'
+      date:
+        $ref: '#/definitions/DateTime'
+      eventType:
+        type: string
+        description: 'The type of event : Annotation'
+
+
+  #A collection of Events Object
+  Events:
+    type: array
+    items:
+      $ref: '#/definitions/Citation'
+    properties:
+      maxitems:
         type: integer
-        format: int32
-        description: The number of events for the time period
-        example: 5948
+        description: 'Maximum length of the Events Collection.'
+        example: '1000'
+
 
   # A collection of metrics objects
   Metrics:
@@ -246,82 +319,58 @@ definitions:
     items: 
       $ref: '#/definitions/Metric'
       
-  # An abstract metric object  
+
+  # A citation metric object
   Metric:
-    type: object
-    discriminator: metricType
     required:
-      - date
       - identifier
-      - metricType
     properties:
+      totalCount:
+        type: integer
+        format: int32
       date:
-          $ref: '#/definitions/DateTime'
+        $ref: '#/definitions/DateTime'
+      metricsByTimeAndLocation:
+        type: array
+        items:
+          $ref: '#/definitions/MetricByTimeAndLocation'
       identifier:
-        type: string
-        description: 
-          'An identifier representing the described resource'
-        example: 'doi:10.12345/ABCDEFG'
+          type: string
+          description: 
+            'An identifier representing the described resource'
+          example: 'doi:10.12345/ABCDEFG'
       metricType:
         type: string
         description: 
-          'The type of metric (citation, investigation, request, volume)'
-        example: citation
+          'The type of metric (citation, investigation, request, volume, funding org, award number), including counts of citation, investigation, requests and bytes of volume transfered'
+        example: 'citation'
 
-  # A citation metric, extends Metric
-  CitationMetric:
-    allOf:
-      - $ref: '#/definitions/Metric'
-      - properties:
-          totalCount:
-            type: integer
-            format: int32
-          citationsByDate:
-            type: array
-            items:
-              $ref: '#/definitions/CountsByDate'
-  
-  # An investigation (view) metric, extends Metric            
-  InvestigationMetric:
-    allOf:
-      - $ref: '#/definitions/Metric'
-      - properties:
-          totalCount:
-            type: integer
-            format: int32
-          investigationsByDate:
-            type: array
-            items:
-              $ref: '#/definitions/CountsByDate'
 
-  # A request metric (downloads), extends Metric
-  RequestMetric:
-    allOf:
-      - $ref: '#/definitions/Metric'
-      - properties:
-          totalCount:
-            type: integer
-            format: int32
-          requestsByDate:
-            type: array
-            items:
-              $ref: '#/definitions/CountsByDate'
+  MetricSummary:
+    required:
+      - metricType
+    properties:
+      metricType:
+        type: string
+        description: ''
+        example: 'citation / investigation / requests / volume'
+      metricCategory:
+        type: string
+        description: ''
+        example: 'funding / organization / award number'
+      totalCountTypeByCategory:
+        type: number
+        example: '123'
+      typeByCategory:
+        type: array
+        items:
+          $ref:  '#/definitions/MetricByTimeAndLocation'
 
-  # A volume metric (transferred bytes), extends Metric
-  VolumeMetric:
-    allOf:
-      - $ref: '#/definitions/Metric'
-      - properties:
-          totalCount:
-            type: integer
-            format: int32
-          volumesByDate:
-            type: array
-            items:
-              $ref: '#/definitions/CountsByDate'
 
 # Added by API Auto Mocking Plugin
 host: virtserver.swaggerhub.com
-basePath: /NCEAS/data-metrics/1.0.0
+# basePath: /NCEAS/data-metrics/1.0.0.2
 schemes:
  - https
+# Added by API Auto Mocking Plugin
+basePath: /nenuji/data-metrics/1.0.0.2
