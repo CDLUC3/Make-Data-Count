@@ -1,0 +1,24 @@
+@startuml ./httpPost.png
+
+  	!include plantuml-styles.txt
+  
+ 	' override the linetype
+  	skinparam linetype ortho 
+
+  	View -> View : Listen to event (Request / Citation / Investigation)
+
+	View --> Model : Report the event for the given PID
+	activate Model
+
+	Model -> Model : Collect "max_items" for events object array
+
+	Model -> API : HTTP POST Request (Events array)
+	activate API
+
+	API -> API : update corresponding object's metrics
+
+	API -> Model : HTTP POST response (Success / Failure)
+	deactivate API
+
+	deactivate Model
+@enduml

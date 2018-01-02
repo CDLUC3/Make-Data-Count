@@ -1,0 +1,75 @@
+@startuml
+
+
+	package mdc {
+
+
+		class frontEnd <<Backbone.View>> {
+			+ reportMetricEvent() : Events
+		}
+
+		class Events <<Backbone.Model>> {
+	         + eventsObject : Citation / Investgation / Request / Change / Annotation [*]
+        }
+
+        class Citation <<Backbone.Model>> {
+	         + identifier : String
+	         + date : DateTime
+	         + cities : String
+	         + author : String [*]
+	         + title : String
+	         + publicationDate : DateTime
+	         + publisher : String
+	         + url : String
+	         + eventId : String
+	         + eventType : String
+        }
+
+        class Investigation <<Backbone.Model>> {
+	         + identifier : String
+	         + date : DateTime
+	         + eventId : String
+	         + eventType : String
+        }
+
+        class Request <<Backbone.Model>> {
+	         + identifier : String
+	         + date : DateTime
+	         + eventId : String
+	         + eventType : String
+        }
+
+        class Change <<Backbone.Model>> {
+	         + identifier : String
+	         + date : DateTime
+	         + obsoletedBy : String
+	         + eventId : String
+	         + eventType : String
+        }
+
+        class Annotation <<Backbone.Model>> {
+	         + identifier : String
+	         + date : DateTime
+	         + eventId : String
+	         + eventType : String
+        }
+
+        class DateTime <<Backbone.Model>> {
+        	+ date : String
+        }
+
+	    frontEnd <.up. Events : listensTo
+		Events o-- Citation : collectionOf
+		Events o-- Investigation : collectionOf
+		Events o-- Request : collectionOf
+		Events o-- Change : collectionOf
+		Events o-- Annotation : collectionOf
+	    Citation *-- DateTime : "contains"
+	    Investigation *-- DateTime : "contains"
+	    Request *-- DateTime : "contains"
+	    Change *-- DateTime : "contains"
+	    Annotation *-- DateTime : "contains"
+
+
+	}
+@enduml

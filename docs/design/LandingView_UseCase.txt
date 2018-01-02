@@ -1,36 +1,22 @@
 @startuml ./LandingView.png
 
-  !include plantuml-styles.txt
+  	!include plantuml-styles.txt
   
-  ' override the linetype
-  skinparam linetype ortho 
+ 	' override the linetype
+  	skinparam linetype ortho 
 
-	actor Bob
-	boundary View #F5F5F5
-	collections Model
-	database API #F5F5F5
+	View -> Model : Request Metrics Data
+	activate Model
 
-	Bob -> View : Click on Dataset Landing Page
-	activate View
-
-	View -> Model : Request Data
-	activate Model 
-
-	Model -> API : HTTP GET Request (Header:PID)
+	Model -> API : HTTP GET Request (Header : PID)
 	activate API
 
-	API -> API : retreive data
+	API -> API : retreive Metrics Object Model based on PID
 
-	API --> Model : HTTP GET response
+	API -> Model : HTTP GET response (array objects of metrics model)
 	deactivate API
 
-	Model -> Model : Computation
-
-	Model --> View : Render View
+	Model -> View : Render View
 	deactivate Model
-
-	View -> Bob : UI/View
-	deactivate View
-
 
 @enduml

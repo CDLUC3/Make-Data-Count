@@ -1,0 +1,60 @@
+@startuml
+
+
+	package mdc {
+
+
+			class MetricsView <<Backbone.View>> {
+				+ getMetrics() : MetricsObject
+				+ getCitationMetrics() : CitationMetricsObject
+				+ getRequestMetrics() : RequestMetricsObject
+				+ getInvestigationMetrics() : InvestigationMetricsObject
+			}
+
+			class Metrics <<Backbone.Model>> {
+		         + metricsObject : CitationMetric [*]
+		         + metricsObject : RequestMetric [*]
+		         + metricsObject : InvestigationMetric [*]
+	        }
+
+
+	        class CitationMetric <<Backbone.Model>> {
+		         + identifier : String
+		         + date : String [*]
+		         + metricType : String
+		         + tatalCount : Integer
+		         + citationsByDate : Integer, String [*, *]
+	        }
+
+	       	class InvestigationMetric <<Backbone.Model>> {
+		         + identifier : String
+		         + date : String [*]
+		         + metricType : String
+		         + tatalCount : Integer
+		         + citationsByDate : Integer, String [*, *]
+	        }
+
+	        class RequestMetric <<Backbone.Model>> {
+		         + identifier : String
+		         + date : String [*]
+		         + metricType : String
+		         + tatalCount : Integer
+		         + citationsByDate : Integer, String [*, *]
+	        }
+
+	        class VolumeMetric <<Backbone.Model>> {
+		         + identifier : String
+		         + date : String [*]
+		         + metricType : String
+		         + tatalCount : Integer
+		         + citationsByDate : Integer, String [*, *]
+	        }
+
+	    Metrics <.right. MetricsView : listensTo
+		Metrics o-- CitationMetric : collectionOf
+		Metrics o-- InvestigationMetric : collectionOf
+		Metrics o-- RequestMetric : collectionOf
+		Metrics o-- VolumeMetric : collectionOf
+
+	}
+@enduml

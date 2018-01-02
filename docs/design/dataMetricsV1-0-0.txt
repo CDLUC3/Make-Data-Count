@@ -1,0 +1,65 @@
+@startuml
+
+
+	package mdc {
+
+			class MetricsView <<Backbone.View>> {
+				+ getMetrics() : MetricsObject
+			}
+
+			class Metrics <<Backbone.Model>> {
+		         + metricsObject : CitationMetric [*]
+	        }
+
+			class Metric <<Backbone.Model>> {
+		         + identifier : String
+		         + date : DateTime [*]
+		         + metricType : String
+	        }
+
+	        class DateTime <<Backbone.Model>> {
+		         + date : String
+	        }
+
+	        class CountsByDate <<Backbone.Model>> {
+		         + date : String
+		         + count : Integer
+	        }
+
+	        class CitationMetric <<Backbone.Model>> {
+		         + tatalCount : Integer
+		         + citationsByDate : CountsByDate [*]
+	        }
+
+	       	class InvestigationMetric <<Backbone.Model>> {
+		         + tatalCount : Integer
+		         + investigationsByDate : CountsByDate [*]
+	        }
+
+	        class RequestMetric <<Backbone.Model>> {
+		         + tatalCount : Integer
+		         + requestsByDate : CountsByDate [*]
+	        }
+
+	        class VolumeMetric <<Backbone.Model>> {
+		         + tatalCount : Integer
+		         + volumesByDate : CountsByDate [*]
+	        }
+
+	    Metrics <.right. MetricsView : listensTo
+		Metrics o-- CitationMetric : collectionOf
+		Metrics o-- InvestigationMetric : collectionOf
+		Metrics o-- RequestMetric : collectionOf
+		Metrics o-- VolumeMetric : collectionOf
+		CitationMetric *-- Metric : "contains"
+		CitationMetric *-- CountsByDate : "contains"
+		InvestigationMetric *-- Metric : "contains"
+		InvestigationMetric *-- CountsByDate : "contains"
+		RequestMetric *-- Metric : "contains"
+		RequestMetric *-- CountsByDate : "contains"
+		VolumeMetric *-- Metric : "contains"
+		VolumeMetric *-- CountsByDate : "contains"
+		Metric *-- DateTime : "contains"
+
+	}
+@enduml

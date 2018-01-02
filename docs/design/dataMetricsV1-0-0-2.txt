@@ -1,0 +1,54 @@
+@startuml
+
+
+	package mdc {
+
+
+			class MetricsView <<Backbone.View>> {
+				+ getMetrics() : MetricsObject
+				+ getMetricsSummaries() : MetricSummaryObject
+			}
+
+			class Metrics <<Backbone.Model>> {
+		         + metricsObject : Metric [*]
+	        }
+
+	        class Metric <<Backbone.Model>> {
+		         + identifier : String
+		         + date : DateTime
+		         + metricType : String
+		         + tatalCount : Integer
+		         + metricByTimeAndLocation : TypeByCategory
+	        }
+
+	        class MetricSummary <<backbone.Model>> {
+	        	+ metricType : String
+	        	+ metricCategory : String
+	        	+ totalCountTypeByCategory : number
+	        	+ typeByCategory : TypeByCategory
+	        }
+
+	        class MetricByTimeAndLocation <<Backbone.Model>> {
+	        	+ time : String
+	        	+ location : String
+	        	+ value : number
+	        }
+
+	        class DateTime <<Backbone.Model>> {
+	        	+ date : String
+	        }
+
+	        class TypeByCategory <<backbone.Model>> {
+	        	+ typeByCategory : MetricByTimeAndLocation [*]
+	        }
+
+	    Metrics <.down. MetricsView : listensTo
+	    MetricSummary <.down. MetricsView : listensTo
+		Metrics o-- Metric : collectionOf
+		TypeByCategory o-- MetricByTimeAndLocation : collectionOf
+		Metrics *-- TypeByCategory : "contains"
+	    MetricSummary *-- TypeByCategory : "contains"
+	    Metric *-- DateTime : "contains"
+
+	}
+@enduml
