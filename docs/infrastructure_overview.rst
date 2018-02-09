@@ -9,7 +9,7 @@ Overview of Infrastructure Components
 
    1. The Coordinating Node (CN) aggregates event information from participating Member Nodes. 
    2. The CN processes events and offers them to the Hub. 
-   3. Publishers offer citation information to DataCite directly or through a Scholix channel. 
+   3. Publishers offer citation information to DataCite via Crossref. 
       
       a. Systems such as repositories or aggregators (CNs) may also offer citation information to DataCite. 
    4. The Hub combines report information with citation information gathered by DataCite. 
