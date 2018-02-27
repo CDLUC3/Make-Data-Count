@@ -1,0 +1,36 @@
+# this file is generated from a master file, please modify it and regenerate it with the generate_lists.rb script
+^ruby$
+AddThis
+aria2\/\d
+CakePHP
+ColdFusion
+curl\/
+^\%?default\%?$
+Dispatch\/\d
+EBSCO\sEJS\sContent\sServer
+Fetch(\s|\+)API(\s|\+)Request
+geturl
+gvfs\/
+HttpComponents\/1.1
+http.?client
+Indy Library
+^java\/\d{1,2}.\d
+libcurl
+libhttp
+libwww
+lwp
+Microsoft(\s|\+)URL(\s|\+)Control
+Microsoft Office Existence Discovery
+ng\/2\.
+no_user_agent
+pear.php.net
+PHP\/
+PycURL
+python
+rss
+^undefined$
+^unknown$
+URL2File
+urllib
+Wget
+wordpress
