@@ -1,0 +1,538 @@
+{
+  "report_header": {
+    "report-name": "Dataset Report",
+    "report-id": "DSR",
+    "release": "RD1",
+    "created": "2018-03-09",
+    "created-by": "Dash",
+    "report-filters": [
+      {
+        "Name": "Begin-Date",
+        "Value": "2018-03-01"
+      },
+      {
+        "Name": "End-Date",
+        "Value": "2018-03-31"
+      }
+    ],
+    "Exceptions": [
+      {
+        "code": 3040,
+        "Severity": "Warning",
+        "Message": "Partial Data Returned",
+        "Help-URL": "String",
+        "Data": "Usage data has not been processed for the entire reporting period"
+      }
+    ]
+  },
+  "report_datasets": [
+    {
+      "Dataset-Title": "Test sharing link",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.5072/FK2XP72W9B"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Scott Fisher"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2018-03-05"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Office of the President",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "30389.31"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2018,
+      "URI": "https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2XP72W9B",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Glo-ball the Elephant Measurements",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.5072/FK2T151W7S"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Gloria Arnand"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-07-27"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Office of the President",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "30389.31"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2T151W7S",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Kathryn Cats",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.5072/FK2J966H3B"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Kathryn Cats"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-07-27"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Office of the President",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "30389.31"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2J966H3B",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Making sure EZID still works",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.5072/FK2TX3CS28"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Scott Fisher"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2018-01-12"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Office of the President",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "30389.31"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2018,
+      "URI": "https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2TX3CS28",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "My Chocolate Cat Thurber Jones",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.5072/FK24T6N929"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Yves Thuries"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-07-25"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Office of the President",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "30389.31"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK24T6N929",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Architecture Considered Harmful",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.5072/FK2CF9RZ9X"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Gloria Rollins"
+        },
+        {
+          "Type": "Name",
+          "Value": "Graham De Long"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2018-02-20"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Office of the President",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "30389.31"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2018,
+      "URI": "https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2CF9RZ9X",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Requests",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Requests",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Requests-Size",
+              "Count": 25262
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Requests-Size",
+              "Count": 25262
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Analyzing the Lookaside Buffer and E-Commerce with HAIL",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.5072/FK2474DX0J"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Scott Fisher"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-07-21"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Berkeley",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "47840.3f"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash-dev.berkeley.edu/stash/dataset/doi:10.5072/FK2474DX0J",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Requests",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Requests",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Requests-Size",
+              "Count": 149613
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Requests-Size",
+              "Count": 149613
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Emoji UTF8 hell",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.5072/FK2H41S68W"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Scott Fisher"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2018-01-18"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Office of the President",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "30389.31"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2018,
+      "URI": "https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2H41S68W",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Requests",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Requests",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Requests-Size",
+              "Count": 1942366
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Requests-Size",
+              "Count": 1942366
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

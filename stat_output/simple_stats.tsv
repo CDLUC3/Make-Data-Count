@@ -1,0 +1,31 @@
+Report_Name	Dataset Master Report
+Report_ID	DSR
+Release	RD1
+Exceptions	3040: Partial Data Returned
+Reporting_Period	2018-03-01 to 2018-03-31
+Created	2018-03-09
+Created_By	Dash
+
+Dataset_Title	Publisher	Publisher_ID	Platform	Creators	Publication_Date	Dataset_Version	DOI	Other_ID	URI	YOP	Access_Method	Metric_Type	Country	Reporting_Period_Total	Reporting_Period_Volume
+Test sharing link	UC Office of the President	grid.30389.31	Dash	Scott Fisher	2018-03-05		10.5072/FK2XP72W9B		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2XP72W9B	2018	Regular	Total_Dataset_Investigations	US	1	
+Test sharing link	UC Office of the President	grid.30389.31	Dash	Scott Fisher	2018-03-05		10.5072/FK2XP72W9B		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2XP72W9B	2018	Regular	Unique_Dataset_Investigations	US	1	
+Glo-ball the Elephant Measurements	UC Office of the President	grid.30389.31	Dash	Gloria Arnand	2017-07-27		10.5072/FK2T151W7S		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2T151W7S	2017	Regular	Total_Dataset_Investigations	US	1	
+Glo-ball the Elephant Measurements	UC Office of the President	grid.30389.31	Dash	Gloria Arnand	2017-07-27		10.5072/FK2T151W7S		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2T151W7S	2017	Regular	Unique_Dataset_Investigations	US	1	
+Kathryn Cats	UC Office of the President	grid.30389.31	Dash	Kathryn Cats	2017-07-27		10.5072/FK2J966H3B		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2J966H3B	2017	Regular	Total_Dataset_Investigations	US	1	
+Kathryn Cats	UC Office of the President	grid.30389.31	Dash	Kathryn Cats	2017-07-27		10.5072/FK2J966H3B		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2J966H3B	2017	Regular	Unique_Dataset_Investigations	US	1	
+Making sure EZID still works	UC Office of the President	grid.30389.31	Dash	Scott Fisher	2018-01-12		10.5072/FK2TX3CS28		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2TX3CS28	2018	Regular	Total_Dataset_Investigations	US	1	
+Making sure EZID still works	UC Office of the President	grid.30389.31	Dash	Scott Fisher	2018-01-12		10.5072/FK2TX3CS28		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2TX3CS28	2018	Regular	Unique_Dataset_Investigations	US	1	
+My Chocolate Cat Thurber Jones	UC Office of the President	grid.30389.31	Dash	Yves Thuries	2017-07-25		10.5072/FK24T6N929		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK24T6N929	2017	Regular	Total_Dataset_Investigations	US	1	
+My Chocolate Cat Thurber Jones	UC Office of the President	grid.30389.31	Dash	Yves Thuries	2017-07-25		10.5072/FK24T6N929		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK24T6N929	2017	Regular	Unique_Dataset_Investigations	US	1	
+Architecture Considered Harmful	UC Office of the President	grid.30389.31	Dash	Gloria Rollins;Graham De Long	2018-02-20		10.5072/FK2CF9RZ9X		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2CF9RZ9X	2018	Regular	Total_Dataset_Investigations	US	1	
+Architecture Considered Harmful	UC Office of the President	grid.30389.31	Dash	Gloria Rollins;Graham De Long	2018-02-20		10.5072/FK2CF9RZ9X		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2CF9RZ9X	2018	Regular	Unique_Dataset_Investigations	US	1	
+Architecture Considered Harmful	UC Office of the President	grid.30389.31	Dash	Gloria Rollins;Graham De Long	2018-02-20		10.5072/FK2CF9RZ9X		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2CF9RZ9X	2018	Regular	Total_Dataset_Requests	US	1	25262
+Architecture Considered Harmful	UC Office of the President	grid.30389.31	Dash	Gloria Rollins;Graham De Long	2018-02-20		10.5072/FK2CF9RZ9X		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2CF9RZ9X	2018	Regular	Unique_Dataset_Requests	US	1	25262
+Analyzing the Lookaside Buffer and E-Commerce with HAIL	UC Berkeley	grid.47840.3f	Dash	Scott Fisher	2017-07-21		10.5072/FK2474DX0J		https://dash-dev.berkeley.edu/stash/dataset/doi:10.5072/FK2474DX0J	2017	Regular	Total_Dataset_Investigations	US	1	
+Analyzing the Lookaside Buffer and E-Commerce with HAIL	UC Berkeley	grid.47840.3f	Dash	Scott Fisher	2017-07-21		10.5072/FK2474DX0J		https://dash-dev.berkeley.edu/stash/dataset/doi:10.5072/FK2474DX0J	2017	Regular	Unique_Dataset_Investigations	US	1	
+Analyzing the Lookaside Buffer and E-Commerce with HAIL	UC Berkeley	grid.47840.3f	Dash	Scott Fisher	2017-07-21		10.5072/FK2474DX0J		https://dash-dev.berkeley.edu/stash/dataset/doi:10.5072/FK2474DX0J	2017	Regular	Total_Dataset_Requests	US	1	149613
+Analyzing the Lookaside Buffer and E-Commerce with HAIL	UC Berkeley	grid.47840.3f	Dash	Scott Fisher	2017-07-21		10.5072/FK2474DX0J		https://dash-dev.berkeley.edu/stash/dataset/doi:10.5072/FK2474DX0J	2017	Regular	Unique_Dataset_Requests	US	1	149613
+Emoji UTF8 hell	UC Office of the President	grid.30389.31	Dash	Scott Fisher	2018-01-18		10.5072/FK2H41S68W		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2H41S68W	2018	Regular	Total_Dataset_Investigations	US	1	
+Emoji UTF8 hell	UC Office of the President	grid.30389.31	Dash	Scott Fisher	2018-01-18		10.5072/FK2H41S68W		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2H41S68W	2018	Regular	Unique_Dataset_Investigations	US	1	
+Emoji UTF8 hell	UC Office of the President	grid.30389.31	Dash	Scott Fisher	2018-01-18		10.5072/FK2H41S68W		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2H41S68W	2018	Regular	Total_Dataset_Requests	US	1	1942366
+Emoji UTF8 hell	UC Office of the President	grid.30389.31	Dash	Scott Fisher	2018-01-18		10.5072/FK2H41S68W		https://dash-dev.ucop.edu/stash/dataset/doi:10.5072/FK2H41S68W	2018	Regular	Unique_Dataset_Requests	US	1	1942366

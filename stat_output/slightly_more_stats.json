@@ -1,0 +1,1732 @@
+{
+  "report_header": {
+    "report-name": "Dataset Report",
+    "report-id": "DSR",
+    "release": "RD1",
+    "created": "2018-03-09",
+    "created-by": "Dash",
+    "report-filters": [
+      {
+        "Name": "Begin-Date",
+        "Value": "2018-03-01"
+      },
+      {
+        "Name": "End-Date",
+        "Value": "2018-03-31"
+      }
+    ],
+    "Exceptions": [
+      {
+        "code": 3040,
+        "Severity": "Warning",
+        "Message": "Partial Data Returned",
+        "Help-URL": "String",
+        "Data": "Usage data has not been processed for the entire reporting period"
+      }
+    ]
+  },
+  "report_datasets": [
+    {
+      "Dataset-Title": "Chemical shift-based methods in NMR structure determination",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.7291/D1Q94R"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Santrupti Nerli"
+        },
+        {
+          "Type": "Name",
+          "Value": "Andrew C. McShan"
+        },
+        {
+          "Type": "Name",
+          "Value": "Nikolaos G. Sgourakis"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2018-05-01"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Santa Cruz",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "205975.c"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2018,
+      "URI": "https://dash.library.ucsc.edu/stash/dataset/doi:10.7291/D1Q94R",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "GB",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 3
+            },
+            {
+              "Country": "GB",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Classification of Facebook Marketing Metrics for Prediction",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.15146/R34P46"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Geovanne Caraciola Faria"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-05-23"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "DataONE",
+      "Publisher-ID": [
+        {
+          "Type": "",
+          "Value": ""
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://oneshare.cdlib.org/stash/dataset/doi:10.15146/R34P46",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "DE",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 3
+            },
+            {
+              "Country": "DE",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Southern Sierra Critical Zone Observatory (SSCZO), Providence Creek meteorological data, soil moisture and temperature, snow depth and air temperature",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6071/Z7WC73"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Roger Bales"
+        },
+        {
+          "Type": "Name",
+          "Value": "Matt Meadows"
+        },
+        {
+          "Type": "Name",
+          "Value": "Erin Stacy"
+        },
+        {
+          "Type": "Name",
+          "Value": "Martha Conklin"
+        },
+        {
+          "Type": "Name",
+          "Value": "Xiande Meng"
+        },
+        {
+          "Type": "Name",
+          "Value": "SSCZO Southern Sierra Critical Zone Observatory"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2016-03-14"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Merced",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266096.d"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2013,
+      "URI": "https://dash.ucmerced.edu/stash/dataset/doi:10.6071/Z7WC73",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Requests",
+              "Count": 5
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Requests",
+              "Count": 3
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Requests-Size",
+              "Count": 3854202
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Requests-Size",
+              "Count": 2312521
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "#GifHistory",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6086/D1CM12"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Bergis Jules"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2018-02-12"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Riverside",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266097.c"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2018,
+      "URI": "https://dash.ucr.edu/stash/dataset/doi:10.6086/D1CM12",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 4
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Predicting drought tolerance from slope aspect preference in restored plant communities",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.7280/D1JD4X"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Sarah Kimball"
+        },
+        {
+          "Type": "Name",
+          "Value": "Megan Lulow"
+        },
+        {
+          "Type": "Name",
+          "Value": "Kathleen Balazs"
+        },
+        {
+          "Type": "Name",
+          "Value": "Travis Huxman"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-09-06"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Irvine",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266093.8"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash.lib.uci.edu/stash/dataset/doi:10.7280/D1JD4X",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "IN",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "IN",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Making Data Count survey responses",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.5060/D8H59D"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "John Kratz"
+        },
+        {
+          "Type": "Name",
+          "Value": "Carly Strasser"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2015-03-25"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Office of the President",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "30389.31"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2015,
+      "URI": "https://dash.ucop.edu/stash/dataset/doi:10.5060/D8H59D",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "HK",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "HK",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "SanFranciscoBay_Adapt2SeaLevelRise_CostData",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6078/D1KK59"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Daniella Hirschfeld"
+        },
+        {
+          "Type": "Name",
+          "Value": "Kristina Hill"
+        },
+        {
+          "Type": "Name",
+          "Value": "Ellen Plane"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-03-11"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Berkeley",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "47840.3f"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash.berkeley.edu/stash/dataset/doi:10.6078/D1KK59",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "RU",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "RU",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Data deposition for Complex electrophysiological remodeling in postinfarction ischemic heart failure",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.25338/B88593"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Bence Hegyi"
+        },
+        {
+          "Type": "Name",
+          "Value": "Ye Chen-Izu"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2018-03-03"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Davis",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "27860.3b"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2018,
+      "URI": "https://dash.ucdavis.edu/stash/dataset/doi:10.25338/B88593",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 2
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 2
+            },
+            {
+              "Country": "GB",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "GB",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Crystal Cove Marine Conservation Area Citizen Science Monitoring",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.7280/D1NK5Z"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Crystal Cove Alliance"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2016-10-11"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Irvine",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266093.8"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2016,
+      "URI": "https://dash.lib.uci.edu/stash/dataset/doi:10.7280/D1NK5Z",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Binding Modes of Ligands Using Enhanced Sampling (BLUES): Rapid Decorrelation of Ligand Binding Modes via Nonequilibrium Candidate Monte Carlo",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.7280/D1ZD38"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Samuel Gill"
+        },
+        {
+          "Type": "Name",
+          "Value": "Nathan Lim"
+        },
+        {
+          "Type": "Name",
+          "Value": "Patrick Grinaway"
+        },
+        {
+          "Type": "Name",
+          "Value": "Ariën Rustenburg"
+        },
+        {
+          "Type": "Name",
+          "Value": "Josh Fass"
+        },
+        {
+          "Type": "Name",
+          "Value": "Gregory Ross"
+        },
+        {
+          "Type": "Name",
+          "Value": "John Chodera"
+        },
+        {
+          "Type": "Name",
+          "Value": "David Mobley"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2018-03-23"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Irvine",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266093.8"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2018,
+      "URI": "https://dash.lib.uci.edu/stash/dataset/doi:10.7280/D1ZD38",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "GB",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "GB",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Data set for \"Planar Hall torque\"",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.15146/R3H09M"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Eric Montoya"
+        },
+        {
+          "Type": "Name",
+          "Value": "Christopher Safranski"
+        },
+        {
+          "Type": "Name",
+          "Value": "Ilya Krivortov"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2018-08-12"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "DataONE",
+      "Publisher-ID": [
+        {
+          "Type": "",
+          "Value": ""
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2018,
+      "URI": "https://oneshare.cdlib.org/stash/dataset/doi:10.15146/R3H09M",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "GB",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "GB",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "In Situ Transmission Electron Microscopy Data of Dislocations in Imperfectly Attached PbTe Nanocrystal Pairs",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6078/D17675"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Justin Ondry"
+        },
+        {
+          "Type": "Name",
+          "Value": "Matthew Hauwiller"
+        },
+        {
+          "Type": "Name",
+          "Value": "A. Paul Alivisatos"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2018-02-24"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Berkeley",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "47840.3f"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2018,
+      "URI": "https://dash.berkeley.edu/stash/dataset/doi:10.6078/D17675",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "GB",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "GB",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Oak Woodland Monitoring for the Irvine Open Space Easements (4)",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.7280/D1001P"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "The Nature Conservancy San Diego Field Office"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2015-04-14"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Irvine",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266093.8"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2015,
+      "URI": "https://dash.lib.uci.edu/stash/dataset/doi:10.7280/D1001P",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "FR",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 2
+            },
+            {
+              "Country": "FR",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "SanFranciscoBay_Adapt2SeaLevelRise_CountyData",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6078/D19596"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Daniella Hirschfeld"
+        },
+        {
+          "Type": "Name",
+          "Value": "Kristina Hill"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-05-20"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Berkeley",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "47840.3f"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash.berkeley.edu/stash/dataset/doi:10.6078/D19596",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Supporting data for Loik et al. 2017 Wavelength-Selective Solar Photovoltaic Systems: Powering greenhouses for plant growth at the food-energy-water nexus. Earth's Future",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.7291/D10T0W"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Michael Loik"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-08-18"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Santa Cruz",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "205975.c"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash.library.ucsc.edu/stash/dataset/doi:10.7291/D10T0W",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "#Charlottesville",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6086/D10T0B"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Bergis Jules"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-08-12"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Riverside",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266097.c"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash.ucr.edu/stash/dataset/doi:10.6086/D10T0B",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "GB",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "GB",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 3
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "Sea Level Rise Impacts on Wastewater Treatment Systems along the U.S. Coasts",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6078/D1N955"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Michelle Hummel"
+        },
+        {
+          "Type": "Name",
+          "Value": "Matthew Berry"
+        },
+        {
+          "Type": "Name",
+          "Value": "Mark Stacey"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2018-03-07"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Berkeley",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "47840.3f"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2018,
+      "URI": "https://dash.berkeley.edu/stash/dataset/doi:10.6078/D1N955",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Requests",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Requests",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Requests-Size",
+              "Count": 72148737
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Requests-Size",
+              "Count": 72148737
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "#BlackTheory",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6086/D1JD4P"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Bergis Jules"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-10-28"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Riverside",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266097.c"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash.ucr.edu/stash/dataset/doi:10.6086/D1JD4P",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "#AmplifyWomen",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6086/D1Q66X"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Bergis Jules"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-10-14"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Riverside",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266097.c"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash.ucr.edu/stash/dataset/doi:10.6086/D1Q66X",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 3
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "DocNow Digital Blackness ",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6086/D1808K"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Bergis Jules"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-12-14"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Riverside",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266097.c"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash.ucr.edu/stash/dataset/doi:10.6086/D1808K",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 2
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "#BLKTwitterstorians January 2018 Chat",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6086/D1P07X"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Bergis Jules"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2018-01-06"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Riverside",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266097.c"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2018,
+      "URI": "https://dash.ucr.edu/stash/dataset/doi:10.6086/D1P07X",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 4
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "#twitterandnews",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6086/D1337P"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Bergis Jules"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2018-03-09"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Riverside",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266097.c"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2018,
+      "URI": "https://dash.ucr.edu/stash/dataset/doi:10.6086/D1337P",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 8
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 8
+            },
+            {
+              "Country": "IE",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "IE",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "CA",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 3
+            },
+            {
+              "Country": "CA",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 3
+            },
+            {
+              "Country": "DE",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "DE",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "DE",
+              "Access-Method": "Machine",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "DE",
+              "Access-Method": "Machine",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "FR",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "FR",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "#SaveACA",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6086/D17P4N"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Bergis Jules"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-01-14"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Riverside",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266097.c"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash.ucr.edu/stash/dataset/doi:10.6086/D17P4N",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 2
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "#DrawingWhileBlack",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6086/D1DT02"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Bergis Jules"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-09-17"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Riverside",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266097.c"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash.ucr.edu/stash/dataset/doi:10.6086/D1DT02",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 2
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "#MarchForBlackWomen",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6086/D14D4Z"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Bergis Jules"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-10-04"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Riverside",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266097.c"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash.ucr.edu/stash/dataset/doi:10.6086/D14D4Z",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 2
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "#BLMKidnapping",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6086/D1CC7X"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Bergis Jules"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-01-06"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Riverside",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266097.c"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash.ucr.edu/stash/dataset/doi:10.6086/D1CC7X",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Dataset-Title": "#WOCAffirmation",
+      "Dataset-ID": [
+        {
+          "Type": "DOI",
+          "Value": "10.6086/D1TW8H"
+        }
+      ],
+      "Dataset-Contributors": [
+        {
+          "Type": "Name",
+          "Value": "Bergis Jules"
+        }
+      ],
+      "Dataset-Dates": [
+        {
+          "Type": "Pub-Date",
+          "Value": "2017-10-14"
+        }
+      ],
+      "Platform": "Dash",
+      "Publisher": "UC Riverside",
+      "Publisher-ID": [
+        {
+          "Type": "GRID",
+          "Value": "266097.c"
+        }
+      ],
+      "Data-Type": "Dataset",
+      "YOP": 2017,
+      "URI": "https://dash.ucr.edu/stash/dataset/doi:10.6086/D1TW8H",
+      "Performance": [
+        {
+          "Period": {
+            "Begin-Date": "2018-03-01",
+            "End-Date": "2018-03-31"
+          },
+          "Instance": [
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Total-Dataset-Investigations",
+              "Count": 1
+            },
+            {
+              "Country": "US",
+              "Access-Method": "Regular",
+              "Metric-Type": "Unique-Dataset-Investigations",
+              "Count": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
