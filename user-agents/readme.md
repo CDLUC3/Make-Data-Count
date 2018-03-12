@@ -25,7 +25,7 @@ Ruby (and probably even JavaScript with the aid of some libraries).
 user-agent (separated by newlines) which is all we really need for log processing.  The first
 line of the text file has a commment (starting with #) telling people to regenerate them and not edit them directly and would be ignored by a program.
 
-##Ruby Environment##
+##Ruby Environment
 
 Ruby is probably already installed in many modern OS environments. If not, it is likely available in your
 package manager or however you install software on your operating system.
