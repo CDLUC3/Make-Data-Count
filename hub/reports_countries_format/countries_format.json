@@ -1,0 +1,57 @@
+{
+  "report_header": {
+    "report_name": "Dataset Master Report",
+    "report_id": "DSR",
+    "created_by": "DataONE",
+    "created": "2125-03-16",
+    "report_filters":[],
+    "report-attributes": []
+  },
+  "report_datasets": [
+    {
+      "uri": "https://search.DataONE.org/index.html#view/https://pasta.lternet.edu/package/metadata/eml/knb-lter-luq/88/559501",
+      "yop": "2010",
+      "dataset-contributors": [
+        {
+          "type": "name",
+          "value": "Jess Zimmerman"
+        }
+      ],
+      "platform": "DataONE",
+      "data_type": "dataset",
+      "publisher": "LTER Network",
+      "publisher_id": [
+        {
+          "type": "orcid",
+          "value": "205975.c"
+        }
+      ],
+      "dataset_id": [
+        {
+          "type": "DOI",
+          "value": "10.6073/pasta/aec48ca27decb1fd2c2f454f1c5f88e4"
+        }
+      ],
+      "performance": [
+        {
+          "period": {
+            "end_date": "2018-03-31",
+            "begin_date": "2018-03-01"
+          },
+          "instance": [
+            {
+              "count": 20,
+              "country-counts": {
+                "US": 17,
+                "FR": 3
+              }, 
+              "metric_type": "total-dataset-investigations"
+            }
+          ]
+        }
+      ],
+      "dataset_title": "Phenologies of the Tabonuco Forest trees and shrubs."
+    }
+  ]
+
+}
