@@ -1,32 +1,209 @@
-# Citations Events
+# Guide for the Event Query API 
+
+This guide is intended to get you up-and-running with real-world Event Query API example for DataCite resources. We'll cover the essentials you need to know, from authentication, to retrieving results, to filtering records. For a full guide of the Event Query API please visit the [official guide](https://www.eventdata.crossref.org/guide/service/query-api/) as well as the [Crossref quick start guide](https://www.eventdata.crossref.org/guide/service/quickstart/). 
+
+Most applications will use an existing wrapper library in the language of your choice, but it's important to familiarize yourself with the underlying API HTTP methods first.
+
+There's no easier way to kick the tires than through cURL. If you are using an alternative client, note that you are required to send a valid User Agent header in your request.
 
 
-## Examples of the citation events
+## Retriving relationships by DOI name
 
-Citations events examples can be found in the [EventData Guide](https://www.eventdata.crossref.org/guide/sources/datacite/).
-
-
-## How to obtain citation events
-
-A guide on how to access events can be found in the [EventData Query API guide](https://www.eventdata.crossref.org/guide/service/query-api/).
+To retrieve DOI relationships we need to call the `events` resource and filter by the *DataCite* `source` and the *DOI name*. To filter by DOI name in this case we will use the `subj-id` filter. 
 
 
-# Citations Events Query API
+    curl "https://query.eventdata.crossref.org/events?mailto=YOUR_EMAIL_HERE&&filter=source:datacite,subj-id:10.5061/dryad.n81g1" 
+    {
+	"status": "ok",
+	"message-type": "event-list",
+	"message": {
+		"next-cursor": "0f8f4dbe-6aa3-47d7-9659-25f60387d4c6",
+		"total-results": 9,
+		"items-per-page": 1000,
+		"events": [
+			{
+				"license": "https:\/\/creativecommons.org\/publicdomain\/zero\/1.0\/",
+				"obj_id": "https:\/\/doi.org\/10.3732\/ajb.1600328",
+				"occurred_at": "2017-03-10T00:54:36Z",
+				"subj_id": "https:\/\/doi.org\/10.5061\/dryad.n81g1",
+				"id": "b5ddb8c0-464c-4e5b-a53f-0c6f68a54d9a",
+				"terms": "https:\/\/doi.org\/10.13003\/CED-terms-of-use",
+				"message_action": "create",
+				"source_id": "datacite",
+				"timestamp": "2017-03-11T11:35:59Z",
+				"relation_type_id": "is_referenced_by"
+			},
+			{
+				"license": "https:\/\/creativecommons.org\/publicdomain\/zero\/1.0\/",
+				"obj_id": "https:\/\/doi.org\/10.3732\/ajb.1600328",
+				"occurred_at": "2017-03-10T00:54:36Z",
+				"subj_id": "https:\/\/doi.org\/10.5061\/dryad.n81g1",
+				"id": "723e3d04-da26-453b-9d88-079d7583139c",
+				"terms": "https:\/\/doi.org\/10.13003\/CED-terms-of-use",
+				"message_action": "create",
+				"source_id": "datacite",
+				"timestamp": "2017-03-11T11:43:29Z",
+				"relation_type_id": "is_referenced_by"
+			},
+			{
+				"license": "https:\/\/creativecommons.org\/publicdomain\/zero\/1.0\/",
+				"obj_id": "https:\/\/doi.org\/10.3732\/ajb.1600328",
+				"occurred_at": "2017-03-10T00:54:36Z",
+				"subj_id": "https:\/\/doi.org\/10.5061\/dryad.n81g1",
+				"id": "ae3ba9cb-7e8a-49cb-96cc-71f6b287b683",
+				"terms": "https:\/\/doi.org\/10.13003\/CED-terms-of-use",
+				"message_action": "create",
+				"source_id": "datacite",
+				"timestamp": "2017-03-11T14:30:59Z",
+				"relation_type_id": "is_referenced_by"
+			},
+			{
+				"license": "https:\/\/creativecommons.org\/publicdomain\/zero\/1.0\/",
+				"obj_id": "https:\/\/doi.org\/10.5061\/dryad.n81g1\/1",
+				"occurred_at": "2017-03-10T00:54:36Z",
+				"subj_id": "https:\/\/doi.org\/10.5061\/dryad.n81g1",
+				"id": "178f15f7-5048-4677-8e9f-97ee81186941",
+				"terms": "https:\/\/doi.org\/10.13003\/CED-terms-of-use",
+				"message_action": "create",
+				"source_id": "datacite",
+				"timestamp": "2017-03-11T14:56:17Z",
+				"relation_type_id": "has_part"
+			},
+			{
+				"license": "https:\/\/creativecommons.org\/publicdomain\/zero\/1.0\/",
+				"obj_id": "https:\/\/doi.org\/10.3732\/ajb.1600328",
+				"occurred_at": "2017-03-10T00:54:36Z",
+				"subj_id": "https:\/\/doi.org\/10.5061\/dryad.n81g1",
+				"id": "1424feb4-b085-4e9c-a9c0-fe32960aa612",
+				"terms": "https:\/\/doi.org\/10.13003\/CED-terms-of-use",
+				"message_action": "create",
+				"source_id": "datacite",
+				"timestamp": "2017-03-11T14:56:22Z",
+				"relation_type_id": "is_referenced_by"
+			},
+			{
+				"license": "https:\/\/creativecommons.org\/publicdomain\/zero\/1.0\/",
+				"obj_id": "https:\/\/doi.org\/10.5061\/dryad.n81g1\/1",
+				"occurred_at": "2017-03-10T00:54:36Z",
+				"subj_id": "https:\/\/doi.org\/10.5061\/dryad.n81g1",
+				"id": "92a4886d-3474-465f-ba3c-e49fb561ff67",
+				"terms": "https:\/\/doi.org\/10.13003\/CED-terms-of-use",
+				"message_action": "create",
+				"source_id": "datacite",
+				"timestamp": "2017-03-11T15:40:03Z",
+				"relation_type_id": "has_part"
+			},
+			{
+				"license": "https:\/\/creativecommons.org\/publicdomain\/zero\/1.0\/",
+				"obj_id": "https:\/\/doi.org\/10.3732\/ajb.1600328",
+				"occurred_at": "2017-03-10T00:54:36Z",
+				"subj_id": "https:\/\/doi.org\/10.5061\/dryad.n81g1",
+				"id": "8fc15593-a118-4bff-b994-966730f4c3b1",
+				"terms": "https:\/\/doi.org\/10.13003\/CED-terms-of-use",
+				"message_action": "create",
+				"source_id": "datacite",
+				"timestamp": "2017-03-11T15:40:04Z",
+				"relation_type_id": "is_referenced_by"
+			},
+			{
+				"license": "https:\/\/creativecommons.org\/publicdomain\/zero\/1.0\/",
+				"obj_id": "https:\/\/doi.org\/10.3732\/ajb.1600328",
+				"source_token": "28276d12-b320-41ba-9272-bb0adc3466ff",
+				"occurred_at": "2017-03-10T00:54:36Z",
+				"subj_id": "https:\/\/doi.org\/10.5061\/dryad.n81g1",
+				"id": "66bff0fe-ffac-436a-8e42-4d2e9d85a9b8",
+				"terms": "https:\/\/doi.org\/10.13003\/CED-terms-of-use",
+				"message_action": "create",
+				"source_id": "datacite",
+				"timestamp": "2017-03-30T09:39:22Z",
+				"relation_type_id": "is_referenced_by"
+			},
+			{
+				"license": "https:\/\/creativecommons.org\/publicdomain\/zero\/1.0\/",
+				"obj_id": "https:\/\/doi.org\/10.3732\/ajb.1600328",
+				"source_token": "28276d12-b320-41ba-9272-bb0adc3466ff",
+				"occurred_at": "2017-03-10T00:54:36Z",
+				"subj_id": "https:\/\/doi.org\/10.5061\/dryad.n81g1",
+				"id": "0f8f4dbe-6aa3-47d7-9659-25f60387d4c6",
+				"terms": "https:\/\/doi.org\/10.13003\/CED-terms-of-use",
+				"message_action": "create",
+				"source_id": "datacite",
+				"timestamp": "2017-05-18T04:26:42Z",
+				"relation_type_id": "is_referenced_by"
+			}
+		]
+	}
+    }
 
-The [Quick Start guide](quickstart) shows you how to get your hands dirty quickly. Come back and read this section afterwards!
+Mmmmm, tastes like JSON. There are a few important things to notice. First the attribute `total-results` describe the number of relationships found for the DOI to other DOIs in the query. In this example for `10.5061/dryad.n81g1` that is 9. The second thing is the `events` attribute which contains an array with the metadata for the 9 relationships found by the query. We will take a look at the attributes of the events in the next section. Having said that, at this point you now know how to use the EventData Query API to retrieve DOI-to-DOI relationships.
 
-In most cases you will want to retrieve a large batch of Events so you can perform further processing on them. The Query API provides access to all Events, with filters to restrict the results based on source, date-range, DOI etc. 
+## DataCite Resources in Event Data
 
-## Query Parameters
+The full description of the DataCite source metatdata can be found [DataCite section](https://www.eventdata.crossref.org/guide/sources/datacite/) of the EventData guide. Please refer to that guide for a full description, here we will just cover the essential. 
 
-The following query parameters are available:
+The data from this sources is all relationships in DataCite metadata deposited by members. Where a relation is made between a DataCite DOI and a Crossref DOI, that link is sent in an Event. In the example for the DOI `10.5061/dryad.n81g1`, an event looks like this:
 
- - `rows` — the number of Events you want to retrieve per page. The default, and recommended, value is 10,000, which allows you to retrieve large numbers of Events quickly. There are typically between 10,000 and 100,000 Events collected per day.
- - `filter` — supply a filter that allows you to restrict results.
- - `cursor` — allows you to iterate through a search result set.
- - `from-updated-date` — a special filter that includes updated and deleted Events, to allow you to keep your dataset up to date.
 
-## Tell us who you are
+    {
+        "license": "https:\/\/creativecommons.org\/publicdomain\/zero\/1.0\/",
+        "obj_id": "https:\/\/doi.org\/10.3732\/ajb.1600328",
+        "source_token": "28276d12-b320-41ba-9272-bb0adc3466ff",
+        "occurred_at": "2017-03-10T00:54:36Z",
+        "subj_id": "https:\/\/doi.org\/10.5061\/dryad.n81g1",
+        "id": "0f8f4dbe-6aa3-47d7-9659-25f60387d4c6",
+        "terms": "https:\/\/doi.org\/10.13003\/CED-terms-of-use",
+        "message_action": "create",
+        "source_id": "datacite",
+        "timestamp": "2017-05-18T04:26:42Z",
+        "relation_type_id": "is_referenced_by"
+    }
+
+Each Event is a JSON-representable object. Events have a core set of fields as described below.
+
+| Field              | Type        | Optional? | Description |
+|--------------------|-------------|-----------|-------------|
+| `subj_id`          | URI         | No  | Subject Persistent ID. |
+| `obj_id`           | URI         | No  | Object Persistent ID. |
+| `timestamp`        | Timestamp   | No  | Timestamp of when the Event was created. |
+| `occurred_at`      | Timestamp   | No  | Timestamp of when the Event is reported to have occurred |
+| `id`               | UUID        | No  | Unique ID for the Event |
+| `source_id`        | string      | No  | A name for the source. In this case this is DataCite |
+| `source_token`     | UUID        | No  | Unique ID that identifies the Agent that generated the Event. |
+| `relation_type_id` | string      | No  | Type of the relationship between the subject and object. The types found in the DataCite schema |
+
+In the example above, we can see that the event represents a relationship between a DataCite DOI and a Crossref DOI, that this relationship was create by a DataCite member, (as the source-id in `datacite` and the subject in the relation if the DataCite DOI), in `2017-03-10` but it was captured by EventData Service in `2017-05-18`. Additionally we know that the relation indicated that the work in the DataCite DOI `10.5061/dryad.n81g1` is referenced by the Crossref DOI `10.3732/ajb.1600328`. 
+
+
+## Filtering Relationships by type
+
+Once you obtain a set of relationships you might want to filtering them by type. This is importat as not all relationship are mean the same. For example for the DOI `10.5061/dryad.n81g1`, we would like to get all the relationship where anorther academic resource references `10.5061/dryad.n81g1` but not relatiopships in which  `10.5061/dryad.n81g1` is part of another work. That can be achieved by filterting by the `relation-type` to obtain relatioship that indicate references by other works, in this case `is_referenced_by`. Lie so:
+
+    curl "https://query.eventdata.crossref.org/events?mailto=kgarza@datacite.org&filter=source:datacite,subj-id:10.5061/dryad.n81g1,relation-type:is_referenced_by"
+
+    {
+	"status": "ok",
+	"message-type": "event-list",
+	"message": {
+		"next-cursor": "0f8f4dbe-6aa3-47d7-9659-25f60387d4c6",
+		"total-results": 7,
+		"items-per-page": 1000,
+		"events": [
+			{
+				"license": "https:\/\/creativecommons.org\/publicdomain\/zero\/1.0\/",
+				"obj_id": "https:\/\/doi.org\/10.3732\/ajb.1600328",
+				"occurred_at": "2017-03-10T00:54:36Z",
+				"subj_id": "https:\/\/doi.org\/10.5061\/dryad.n81g1",
+				"id": "b5ddb8c0-464c-4e5b-a53f-0c6f68a54d9a",
+				"terms": "https:\/\/doi.org\/10.13003\/CED-terms-of-use",
+				"message_action": "create",
+				"source_id": "datacite",
+				"timestamp": "2017-03-11T11:35:59Z",
+				"relation_type_id": "is_referenced_by"
+			},
+
+This is a very similar query to the one above but you will see there are 2 hits less than before("total-results": 7). This is because there were two relationship with the type `has_part`, which have been filtered out.
+
+## Authentication: Tell us who you are
 
 Please also send the `mailto` query parameter. **It is not compulsory**, but will help us understand how people are using the API and get in contact if we need to. We won't share your email address, and will only contact you in connection with API use. For example: 
 
@@ -34,169 +211,12 @@ Please also send the `mailto` query parameter. **It is not compulsory**, but wil
 
 If you are uncomfortable sending a contact email address, then don't. You can [read more about the rationale here](https://github.com/CrossRef/rest-api-doc#etiquette).
 
-## Filter parameters
 
-The `filter` parameter takes a `field:value,other-field:other-value` format, using colon (`:`) to separate keys and values and commas (`,`) to separate clauses. You can put keys or values in quotes if they contain colons, for example `subj-id:"http://example.com"`. The following fields are available. They can be used in any combination.
 
-  - `from-occurred-date ` - as YYYY-MM-DD
-  - `until-occurred-date ` - as YYYY-MM-DD
-  - `from-collected-date` - as YYYY-MM-DD
-  - `until-collected-date` - as YYYY-MM-DD
-  - `subj-id` - quoted URL or a DOI
-  - `obj-id` - quoted URL or a DOI
-  - `subj-id.prefix` - DOI prefix like 10.5555, if Subject is a DOI
-  - `obj-id.prefix` - DOI prefix like 10.5555, if Object is a DOI
-  - `subj-id.domain` - domain of the subj_id e.g. en.wikipedia.org
-  - `obj-id.domain` - domain of the obj_url e.g. en.wikipedia.org
-  - `subj.url` - quoted full URL
-  - `obj.url` - quoted full URL
-  - `subj.url.domain` - domain of the optional subj.url, if present e.g. en.wikipedia.org
-  - `obj.url.domain` - domain of the optional obj.url, if present e.g. en.wikipedia.org
-  - `subj.alternative-id` - optional subj.alternative-id
-  - `obj.alternative-id` - optional obj.alternative-id
-  - `relation-type` - relation type ID
-  - `source` - source ID
+Woot! Now you know the basics of the EventData Query API!
 
-## Facets
+- Retrieving DataCite DOI relationships
+- Filtering by DataCite sources and relationship types
 
-Facets allow you to view a breakdown of the results that match your query. Using facets, you can answer questions like "of the search results, how many came from each source" or "of the search results, what were the top domains?". Facets can help you understand search results and to guide further investigation.
 
-**The numbers that are returned are approximate not exact** and you should be careful what you do with them. Bear in mind, for example, that the same link may be observed more than once at different points in time. Facets represent "this many Events" not necessarily "this many links".
-
-The following facets are available.
-
- - `source` - source ID
- - `relation-type` - relation type ID
- - `obj-id.prefix` - DOI prefix like 10.5555, if Object is a DOI
- - `subj-id.prefix` - DOI prefix like 10.5555, if Subject is a DOI
- - `subj-id.domain` - Domain of the `subj_id` URL
- - `obj-id.domain` - Domain of the `obj_id` URL
- - `subj.url.domain` - Domain of the `subj.url` URL. This may or may not be the same as the `subj_id`.
- - `obj.url.domain` - Domain of the `obj.url` URL. This may or may not be the same as the `obj_id`.
-
-Each facet should be supplied with a limit (i.e. the top <i>n</i> results) or `*`, which is the maximum number supported. The syntax of a facet is `«facet»:«limit»`. For example
-
- - `source:*` means "show me the breakdown by source, up to the limit"
- - `subj-id.domain:*` means "show me the breakdown by the subject's domain name, up to the limit"
- - `subj-id.domain:10` means "show me the top 10 subj-id domains".
-
-You many use any combination of facets, separated by commas. The following query means "show me the top 10 domains found in Events for the Newsfeed source":
-
-    http://query.eventdata.crossref.org/events?mailto=YOUR_EMAIL_HERE&rows=0&filter=source:newsfeed&facet=subj-id.domain:10
-
-The result, at the time of writing, incldues:
-
-    facets: {
-      subj-id-domain: {
-        value-count: 10,
-        values: {
-          www.sciencenews.org: 11572,
-          www.curiousmeerkat.co.uk: 7782,
-          www.scientificamerican.com: 6768,
-          www.euroscientist.com: 6191,
-          www.sbpdiscovery.org: 5063,
-          speakingofresearch.com: 5031,
-          www.nationalelfservice.net: 4926,
-          retractionwatch.com: 4848,
-          cosmosmagazine.com: 4507,
-          academic.oup.com: 4365
-        }
-      }
-    }
-
-The following query means "of all Newsfeed Events found from www.theguardian.com, show me the top DOI prefixes that Events refer to".
-
-    http://query.eventdata.crossref.org/events?mailto=YOUR_EMAIL_HERE&rows=0&filter=source:newsfeed,subj-id.domain:www.theguardian.com&facet=obj-id.prefix:*
-
-The result shows:
-
-    facets: {
-      obj-prefix: {
-        value-count: 46,
-        values: {
-          10.1038: 418,
-          10.5281: 255,
-          10.1136: 45,
-          10.1080: 36,
-          10.1371: 27,
-          10.1111: 27,
-          10.2139: 25,
-          10.1007: 19,
-          10.1002: 16,
-          10.3354: 9,
-          10.5772: 8,
-          10.1056: 7,
-          10.3389: 5,
-          10.1098: 4,
-          10.7717: 3,
-          10.1086: 3,
-    ...
-        }
-      }
-    }
-
-Remember that these totals don't refer to unique links necessarily, so you should be cautious about using the numbers for anything other than exploration.
-
-## Navigating results
-
-Every API response includes a `cursor` field. If this is not `null`, you should append that cursor value to query to fetch the next page of results. Once you have fetched all results the returned cursor value will be `null`.
-
-The total number of results matched by the query is also returned.
-
-The order or Events returned in the result is not defined, but is stable. This means that if you iterate over a result set using the cursor you will retrieve all results for that query.
-
-## Example queries
-
-Ten Events from the Reddit source:
-
-    https://query.eventdata.crossref.org/events?mailto=YOUR_EMAIL_HERE&rows=10&filter=source:reddit
-
-Ten Events collected on the first of March 2017
-
-    https://query.eventdata.crossref.org/events?mailto=YOUR_EMAIL_HERE&rows=10&filter=from-collected-date:2017-03-01,until-collected-date:2017-03-01
-
-Ten Events collected in the month of March 2017
-
-    https://query.eventdata.crossref.org/events?mailto=YOUR_EMAIL_HERE&rows=10&filter=from-collected-date:2017-03-01,until-collected-date:2017-03-31
-
-Ten Events that occurred on or after the 10th of March 2017
-
-    https://query.eventdata.crossref.org/events?mailto=YOUR_EMAIL_HERE&rows=10&filter=from-occurred-date:2017-03-10
-
-Up to ten Events for the DOI https://doi.org/10.1186/s40536-017-0036-8
-
-    https://query.eventdata.crossref.org/events?mailto=YOUR_EMAIL_HERE&rows=10&filter=obj-id:10.1186/s40536-017-0036-8
-
-Ten Events for the DOI prefix 10.1186
-
-    http://query.eventdata.crossref.org/events?mailto=YOUR_EMAIL_HERE&rows=10&filter=obj-id.prefix:10.1186
-
-All Events ever! Note that you will need to use the cursor to iterate through the result set.
-
-    http://query.eventdata.crossref.org/events?mailto=YOUR_EMAIL_HERE&rows=10000
-
-Using the cursor returned from the first page (yours may be different) 
-
-    http://query.eventdata.crossref.org/events?mailto=YOUR_EMAIL_HERE&rows=10000&cursor=17399fd9-319d-4b28-9727-887264a632b1
-
-## Keeping up to date
-
-Events can be marked as deleted or edited, as described in the [updates](../data/updates) page. By default the Query API won't serve Events that have been marked as deleted. 
-
-If you want to check whether not not events have been updated (edited or deleted) you should supply the `from-updated-date` in `YYYY-MM-DD` format. The API will return only those Events that were updated on or after that day, **including those that were deleted**.
-
-For example, on the 2nd of February 2017 you retrieve events from Twitter:
-
-    http://query.eventdata.crossref.org/events?mailto=YOUR_EMAIL_HERE&rows=10&filter=source:twitter
-
-You store the Events. One month later, you re-query for any Events that were updated since you last queried:
-
-    http://query.eventdata.crossref.org/events?mailto=YOUR_EMAIL_HERE&rows=10&filter=source:twitter&from-update-date:2017-02-02
-
-**We only edit Events when we absolutely need to** and the Query API will usually send an empty reply, confirming that you don't need to update your data. If it does, you should over-write your stored Events with the new ones. 
-
-**If you retrieve Events and store them, you should regularly check up to see if they have been updated.** We don't anticipate this will happen very often, but when it does happen, it is important that you stay up-to-date. See the Best Practice section for guidance.
-
-### Updates and Evidence
-
-Every Evidence Record that results in an Event will contain a copy of that Event (minus the timestamp, which is applied later). If an update is made to an Event, it will not be recorded in the original Event Record.
+Keep learning with the [EventData API official guide](https://www.eventdata.crossref.org/guide/service/query-api/) as well as the [Crossref quick start guide](https://www.eventdata.crossref.org/guide/service/quickstart/). 
