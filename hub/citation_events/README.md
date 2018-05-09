@@ -2,14 +2,26 @@
 
 This guide is intended to get you up-and-running with real-world Event Query API example for DataCite resources. We'll cover the essentials you need to know, from authentication, to retrieving results, to filtering records. For a full guide of the Event Query API please visit the [official guide](https://www.eventdata.crossref.org/guide/service/query-api/) as well as the [Crossref quick start guide](https://www.eventdata.crossref.org/guide/service/quickstart/). 
 
+
+## What's the Event Query API ?
+
+The Event Query API is a service that collects and publishes events that happen in the web around DOIs. In the case of datacite resources, these events regurlaly are links to/from DataCite to/from other Scholalry resources. These links can be provided by three sources: DataCite, Crossref and DataCite Usage. 
+
+- DataCite: Links from DataCite DOIs to Crossref DOIs. These are recorded in the metadata for DataCite's Registered Content. The data is ultimatley supplied by DataCite members who are the publishers and 'owners' of the Registered Content.
+- Crossref: Links from Crossref DOIs to DataCite DOIs. These are recorded in the metadata for Crosref's Registered Content. The data is ultimatley supplied by Crossref members who are the publishers and 'owners' of the Registered Content.
+- DataCite Usage: Links from MakeDataCount Usage Reports to DataCite DOIs. These are recorded in the MakeDataCount Hub API.  The data is ultimatley supplied by DataCite clients.
+
+
 Most applications will use an existing wrapper library in the language of your choice, but it's important to familiarize yourself with the underlying API HTTP methods first.
 
 There's no easier way to kick the tires than through cURL. If you are using an alternative client, note that you are required to send a valid User Agent header in your request.
 
 
+In the rest of this guide we will run an example using the DOI `10.5061/dryad.n81g1` and retireving events/links from the `datacite` source.
+
 ## Retriving relationships by DOI name
 
-To retrieve DOI relationships we need to call the `events` resource and filter by the *DataCite* `source` and the *DOI name*. To filter by DOI name in this case we will use the `subj-id` filter. 
+To retrieve DOI links we need to call the `events` resource and filter by the *DataCite* `source` and the *DOI name*. To filter by DOI name in this case we will use the `subj-id` filter. 
 
 
     curl "https://query.eventdata.crossref.org/events?mailto=YOUR_EMAIL_HERE&&filter=source:datacite,subj-id:10.5061/dryad.n81g1" 
@@ -135,13 +147,13 @@ To retrieve DOI relationships we need to call the `events` resource and filter b
 	}
     }
 
-Mmmmm, tastes like JSON. There are a few important things to notice. First the attribute `total-results` describe the number of relationships found for the DOI to other DOIs in the query. In this example for `10.5061/dryad.n81g1` that is 9. The second thing is the `events` attribute which contains an array with the metadata for the 9 relationships found by the query. We will take a look at the attributes of the events in the next section. Having said that, at this point you now know how to use the EventData Query API to retrieve DOI-to-DOI relationships.
+Mmmmm, tastes like JSON. There are a few important things to notice. First the attribute `total-results` describe the number of events/links found for the DOI to other DOIs in the query. In this example for `10.5061/dryad.n81g1` that is 9. The second thing is the `events` attribute which contains an array with the metadata for the 9 events/links found by the query. We will take a look at the attributes of the events in the next section. Having said that, at this point you now know how to use the EventData Query API to retrieve DOI-to-DOI events/links.
 
-## DataCite Resources in Event Data
+## Links Provided by DataCite Members in Event Data
 
 The full description of the DataCite source metatdata can be found [DataCite section](https://www.eventdata.crossref.org/guide/sources/datacite/) of the EventData guide. Please refer to that guide for a full description, here we will just cover the essential. 
 
-The data from this sources is all relationships in DataCite metadata deposited by members. Where a relation is made between a DataCite DOI and a Crossref DOI, that link is sent in an Event. In the example for the DOI `10.5061/dryad.n81g1`, an event looks like this:
+The data from this sources is all events/links in DataCite metadata deposited by DataCite members. Where a relation is made between a DataCite DOI and a Crossref DOI, that link is sent in an Event. In the example for the DOI `10.5061/dryad.n81g1`, an event looks like this:
 
 
     {
@@ -174,9 +186,9 @@ Each Event is a JSON-representable object. Events have a core set of fields as d
 In the example above, we can see that the event represents a relationship between a DataCite DOI and a Crossref DOI, that this relationship was create by a DataCite member, (as the source-id in `datacite` and the subject in the relation if the DataCite DOI), in `2017-03-10` but it was captured by EventData Service in `2017-05-18`. Additionally we know that the relation indicated that the work in the DataCite DOI `10.5061/dryad.n81g1` is referenced by the Crossref DOI `10.3732/ajb.1600328`. 
 
 
-## Filtering Relationships by type
+## Filtering events/links by type
 
-Once you obtain a set of relationships you might want to filtering them by type. This is importat as not all relationship are mean the same. For example for the DOI `10.5061/dryad.n81g1`, we would like to get all the relationship where anorther academic resource references `10.5061/dryad.n81g1` but not relatiopships in which  `10.5061/dryad.n81g1` is part of another work. That can be achieved by filterting by the `relation-type` to obtain relatioship that indicate references by other works, in this case `is_referenced_by`. Lie so:
+Once you obtain a set of events/links you might want to filtering them by type. This is importat as not all relationship are mean the same. For example for the DOI `10.5061/dryad.n81g1`, we would like to get all the relationship where anorther academic resource references `10.5061/dryad.n81g1` but not relatiopships in which  `10.5061/dryad.n81g1` is part of another work. That can be achieved by filterting by the `relation-type` to obtain relatioship that indicate references by other works, in this case `is_referenced_by`. Lie so:
 
     curl "https://query.eventdata.crossref.org/events?mailto=kgarza@datacite.org&filter=source:datacite,subj-id:10.5061/dryad.n81g1,relation-type:is_referenced_by"
 
@@ -201,7 +213,7 @@ Once you obtain a set of relationships you might want to filtering them by type.
 				"relation_type_id": "is_referenced_by"
 			},
 
-This is a very similar query to the one above but you will see there are 2 hits less than before("total-results": 7). This is because there were two relationship with the type `has_part`, which have been filtered out.
+This is a very similar query to the one above but you will see there are 2 hits less than before(`total-results`: 7). This is because there were two relationship with the type `has_part`, which have been filtered out.
 
 ## Authentication: Tell us who you are
 
@@ -215,8 +227,8 @@ If you are uncomfortable sending a contact email address, then don't. You can [r
 
 Woot! Now you know the basics of the EventData Query API!
 
-- Retrieving DataCite DOI relationships
-- Filtering by DataCite sources and relationship types
+- Retrieving DataCite DOI evetns/links
+- Filtering by DataCite source and relationship types
 
 
 Keep learning with the [EventData API official guide](https://www.eventdata.crossref.org/guide/service/query-api/) as well as the [Crossref quick start guide](https://www.eventdata.crossref.org/guide/service/quickstart/). 
