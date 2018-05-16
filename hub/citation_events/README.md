@@ -226,46 +226,12 @@ Here it is a list of the relation types that should be filtered in order to comp
 
 | Always Exclude |
 | -----|
-| isContinuedBy |
-| Continues |
-| isDescribed by |
-| Describes |
-| HasMetadata |
-| IsMetadataFor |
 | HasVersion |
 | IsVersionOf |
 | IsNewVersionOf |
 | IsPreviousVersionOf |
 | IsPartOf |
 | HasPart |
-| IsDocumentedBy |
-| Documents |
-| IsVariantFormOf |
-| IsOriginalFormOf |
-| IsIdenticalTo |
-| IsReviewedBy |
-| Reviews |
-| IsDerivedFrom |
-
-Depending on the source there would be different relation types to filter out, see table 2. For example, if the source is `DataCite` 
-
-|   Source  |  Include  | Filter-Out  |
-|  ------  |--------     |-------------    |
-| DataCite   |     |    |
-|    |  IsCitedBy   |   Cites |
-|    |  IsSupplementTo   | IsSupplementedBy   |
-|    |  IsReferencedBy   |  References  |
-|    |  IsCompiledBy   | Compiles   |
-|    |  IsSourceOf   |  Requires  |
-|    |  IsRequiredBy   |    |
-|    |     |    |
-| Crossref   |     |    |
-|    |  Cites   | IsCitedBy   |
-|    |  IsSupplementedBy   |  IsSupplementTo  |
-|    |   Compiles  |  IsReferencedBy  |
-|    |   Requires  |  IsCompiledBy  |
-|    |  References   | IsSourceOf   |
-|    |     |  IsRequiredBy  |
 
 
 ## Authentication: Tell us who you are
