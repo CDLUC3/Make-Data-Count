@@ -209,20 +209,20 @@ After results for both sources are retrieved, the following relation types are k
 
 <table>
   <tr>
-    <td>DataSite Relation Types</td>
+    <td>DataCite Relation Types</td>
     <td>Crossref Relation Types</td>
   </tr>
   <tr>
-    <td>Is_cited_by
-Is_supplement_to
-Is_referenced_by
-Is_compiled_by
-Is_source_of
+    <td>Is_cited_by<br/>
+Is_supplement_to<br/>
+Is_referenced_by<br/>
+Is_compiled_by<br/>
+Is_source_of<br/>
 is_required_by</td>
-    <td>cites
-Is_supplemented_by
-compiles
-requires
+    <td>cites<br/>
+Is_supplemented_by<br/>  
+compiles<br/>
+requires<br/>
 references</td>
   </tr>
 </table>
