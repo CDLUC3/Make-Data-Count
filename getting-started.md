@@ -205,27 +205,17 @@ Getting citations for a DOI requires using the Citation API.  It involves two qu
 
 By setting the page size to a suitably large number (like 10,000) we likely do not need to retrieve multiple pages to get a reasonable result set.
 
-After results for both sources are retrieved, the following relation types are kept as citations for the dataset.
+After results for both sources are retrieved, the following relation types are to be excluded as citations for the dataset.
 
-<table>
-  <tr>
-    <td>DataCite Relation Types</td>
-    <td>Crossref Relation Types</td>
-  </tr>
-  <tr>
-    <td>Is_cited_by<br/>
-Is_supplement_to<br/>
-Is_referenced_by<br/>
-Is_compiled_by<br/>
-Is_source_of<br/>
-is_required_by</td>
-    <td>cites<br/>
-Is_supplemented_by<br/>  
-compiles<br/>
-requires<br/>
-references</td>
-  </tr>
-</table>
+| Exclude |
+| -----|
+| HasVersion | 
+| IsVersionOf | 
+| IsNewVersionOf | 
+| IsPreviousVersionOf | 
+| IsIdenticalTo | 
+| HasPart | 
+| IsPartOf | 
 
 
 A reference to a dataset may appear in both sources (DataCite and Crossref) for the same item. For example, the dataset may indicate it it cited by a certain paper and the paper may indicate it cites the dataset.  Because of possible duplication, any duplicate citations need to be deduplicated and eliminated when merging results in order to avoid redundant citations.
